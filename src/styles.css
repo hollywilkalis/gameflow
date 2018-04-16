@@ -1,14 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-.yellow {
-  border: 4px solid yellow;
+
+* {
+  box-sizing: border-box;
 }
 
-.red {
+body {
+  background-color: rgba(234, 224, 204, 1);
+}
+
+.brand1--background {
+  background-color: rgba(122, 22, 20, 1);
+}
+
+.white--background {
+  background-color: white;
+}
+
+.brand2--background {
+  background-color: rgba(43, 35, 33, 1);
+}
+
+.brand1--text {
+  color: rgba(122, 22, 20, 1);
+}
+
+.brand2--text {
+  color: rgba(43, 35, 33, 1);
+}
+
+.fira {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.limited {
   font-weight: bold;
 }
-.red::after {
-  content: " (High)";
+.limited::after {
+  content: " (Only a few spots left!)";
   color: #ccc;
 }
 

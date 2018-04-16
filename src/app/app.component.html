@@ -1,11 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark brand1--background fira">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h1>{{title}}</h1>
 <div class="container">
-  <h1>{{title}}</h1>
-  <h3>Filter Classes by Level</h3>
-  <select class="form-control mb-2" (change)="onChange($event.target.value)">
-    <option value=0>Show all classes</option>
-    <option value=1>Show beginner classes</option>
-    <option value=2>Show intermediate classes</option>
-    <option value=3>Show advanced classes</option>
-  </select>
-  <app-edit-session [childSessions]="sessions"></app-edit-session>
+  <div class="row">
+    <div class="col-sm-3">
+      <h3 class="fira brand1--text">Ready to get started?</h3>
+      <h5 class="brand2--text">Search by experience level</h5>
+      <select class="form-control mb-2" (change)="onChange($event.target.value)">
+        <option value=0>Show all classes</option>
+        <option value=1>Show beginner classes</option>
+        <option value=2>Show intermediate classes</option>
+        <option value=3>Show advanced classes</option>
+      </select>
+    </div>
+    <div class="col-sm-9 listing-container">
+      <app-edit-session [childSessions]="sessions"></app-edit-session>
+    </div>
+  </div>
 </div>
