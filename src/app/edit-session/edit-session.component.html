@@ -1,21 +1,18 @@
 <div class="row">
-  <div *ngFor="let session of childSessions" class="col-sm-6">
-    <div class="card">
-      <img class="card-img-top" src="{{session.image}}" alt="Card image cap">
+  <div *ngFor="let session of childSessions" class="col-md-6">
+    <div class="card margin--bottom--md">
+      <img class="card-img-top" src="{{session.image}}" alt="{{session.title}}">
       <div class="card-body">
-        <h5 class="card-title fira">{{session.title}}</h5>
+        <h5 class="card-title fira brand1--text">{{session.title}}</h5>
         <h6>Instructor: {{session.instructor}}</h6>
         <p class="card-text">{{session.description}}</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{session.day}}, {{session.time}}</li>
-        <li class="list-group-item">{{session.instructor}}</li>
         <li class="list-group-item">{{session.category}} - {{session.level}}</li>
+        <li class="list-group-item"><strong>Day and time:</strong> {{session.day}}, {{session.time}}<br/>
+          <strong>Class dates: </strong>{{session.dates}}</li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Learn more</a>
-        <a href="#" class="card-link">Register</a>
-      </div>
+        <a class="btn btn-dark brand2--background" href="#" role="button">Register</a>
     </div>
   </div>
 </div>

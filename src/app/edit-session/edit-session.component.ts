@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-
 import { Session } from '../app.component';
 
 @Component({
@@ -7,6 +6,7 @@ import { Session } from '../app.component';
   templateUrl: './edit-session.component.html',
   styleUrls: ['./edit-session.component.css']
 })
+
 export class EditSessionComponent implements OnInit {
 
   @Input() childSessions: Session[];
@@ -23,6 +23,4 @@ export class EditSessionComponent implements OnInit {
   toggle() {
     this.childDisplay = !this.childDisplay;
   }
-
-  
 }
